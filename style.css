@@ -1,0 +1,99 @@
+body{
+    background-color: #c0dce7;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.heading{
+    width: 50%;
+    margin: 30px auto;
+    text-align: center;
+    color: #333;
+    background: #dbe8f1;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    font-size: 1.3em;    
+}
+
+form{
+    width: 50%;
+    margin: 30px auto;
+    border-radius: 8px;
+    padding: 10px;
+    background: #dbe8f1;
+    border: 1px solid #000000;
+}
+
+.task_input{
+    width: 70%;
+    height: 15px;
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    margin-right: 7px;
+}
+
+.add_btn{
+    height: 39px;
+    background: #dbe8f1;
+    color:#333;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    padding: 5px 20px;
+}
+
+.add_btn:hover{
+    cursor: pointer;
+}
+
+table{
+    width: 50%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+tr{
+    border-bottom: 1px solid #cbcbcb;
+}
+
+th{
+    font-size: 19px;
+    color: #333;
+}
+
+th, td{
+    border: none;
+    height: 30px;
+    padding: 2px;
+}
+
+.delete:hover{
+    cursor: pointer;
+}
+
+.task{
+    text-align: center;
+}
+
+.delete{
+    text-align: center;
+}
+
+.task_number{
+    text-align: center;
+}
+
+.delete a{
+    color: white;
+    background: #cc3636;
+    border-radius: 30%;
+    padding: 3px 6px;
+}
+
+.delete a:hover{
+    background: #f77777;
+}
+
+form p{
+    color: red;
+    margin: 0;
+}
