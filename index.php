@@ -11,19 +11,19 @@ if(isset($_POST['submit'])){
     if (empty($task)){
         $errors = "Vous devez entrer une tâche.";
     }else{
-        $sql_insert = "INSERT INTO tasks (task) VALUES ('$task')"; 
+        $sql_insert = "INSERT INTO tasks (task) VALUES (?)"; 
         $stmt = mysqli_prepare($db, $sql_insert);
 
-         mysqli_stmt_execute($stmt);
+        
+        mysqli_stmt_bind_param($stmt, "s", $task);
 
-        //  mysqli_stmt_bind_param($stmt, "s", $task);
+        mysqli_stmt_execute($stmt);
     
          $result = mysqli_stmt_get_result($stmt);
 
-         header('location: index.php');
     }
 
-}
+} 
 
 // delete task
 
@@ -81,6 +81,7 @@ $tasks = mysqli_stmt_get_result($stmt2);
         <thead>
             <tr>
                 <th>N°</th>
+                <th>ID</th>
                 <th>Tâche</th>
                 <th>Action</th>
             </tr>
@@ -92,6 +93,7 @@ $tasks = mysqli_stmt_get_result($stmt2);
             while($row = mysqli_fetch_array($tasks)){ ?>
              <tr>
                 <td class="task_number"><?php echo $i; ?></td>
+                <td class="task_number"><?php echo $row['id']; ?></td>
                 <td class="task"><?php echo $row['task']; ?></td>
                 <td class="delete"><a href="index.php?del_task=<?php echo $row['id']; ?>"><i class="fa-solid fa-trash"></i></a></td>
 
