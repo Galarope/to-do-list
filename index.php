@@ -81,7 +81,6 @@ $tasks = mysqli_stmt_get_result($stmt2);
         <thead>
             <tr>
                 <th>N°</th>
-                <th>ID</th>
                 <th>Tâche</th>
                 <th>Action</th>
             </tr>
@@ -93,7 +92,6 @@ $tasks = mysqli_stmt_get_result($stmt2);
             while($row = mysqli_fetch_array($tasks)){ ?>
              <tr>
                 <td class="task_number"><?php echo $i; ?></td>
-                <td class="task_number"><?php echo $row['id']; ?></td>
                 <td class="task"><?php echo $row['task']; ?></td>
                 <td class="delete"><a href="index.php?del_task=<?php echo $row['id']; ?>"><i class="fa-solid fa-trash"></i></a></td>
 
